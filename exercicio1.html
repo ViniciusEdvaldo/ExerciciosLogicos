@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Fibonacci</title>
+    <script>
+        function verificarFibonacci() {
+            let num = parseInt(document.getElementById("inputFibonacci").value);
+            let a = 0, b = 1;
+            
+            
+            while(b < num){
+                [a,b] = [b, a + b];
+            }
+
+            
+            if (b === num || a === num) {
+                document.getElementById("resultado").innerText = num + " está na sequência de Fibonacci.";
+            } else {
+                document.getElementById("resultado").innerText = num + " não está na sequência de Fibonacci.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Verifique se um número está na sequência de Fibonacci</h2>
+    <input type="number" id="inputFibonacci" placeholder="Informe um número">
+    <button onclick="verificarFibonacci()">Verificar</button>
+    <p id="resultado"></p>
+</body>
+</html>

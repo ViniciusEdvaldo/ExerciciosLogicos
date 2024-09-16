@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Letra 'A'</title>
+    <script>
+        function verificarLetraA() {
+            let str = document.getElementById("inputString").value;
+            let count = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                if (str[i].toLowerCase() === 'a') {
+                    count++;
+                }
+            }
+
+            document.getElementById("resultado").innerText = "A letra 'a' aparece " + count + " vezes.";
+        }
+    </script>
+</head>
+<body>
+    <h2>Verifique quantas vezes a letra 'a' aparece em uma string</h2>
+    <input type="text" id="inputString" placeholder="Informe uma string">
+    <button onclick="verificarLetraA()">Verificar</button>
+    <p id="resultado"></p>
+</body>
+</html>
